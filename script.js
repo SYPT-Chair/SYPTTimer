@@ -36,7 +36,7 @@ class Timer {
 
         // 5-minute engagement window only for Segment 5 (index 4)
         if (this.index === 4) {
-            this.subDuration = 5 * 60;
+            this.subDuration = 4 * 60;
             this.subTimeLeft = this.subDuration;   // FIX: start with 300 s, not false
             this.subExpired = false;
             this.engaged = false;                  // FIX: initialise engagement flag
