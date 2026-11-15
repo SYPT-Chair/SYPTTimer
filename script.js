@@ -34,7 +34,7 @@ class Timer {
         this.pauseBtn = this.element.querySelector(".pauseBtn");
         this.resetBtn = this.element.querySelector(".resetBtn");
 
-        // 5-minute engagement window only for Segment 5 (index 4)
+        // 4-minute engagement window only for Segment 5 (index 4)
         if (this.index === 4) {
             this.subDuration = 4 * 60;
             this.subTimeLeft = this.subDuration;   // FIX: start with 300 s, not false
@@ -125,7 +125,7 @@ class Timer {
             } else if (!this.subExpired && this.subTimeLeft <= 0) {
                 this.subExpired = true;
                 this.subTimeLeft = 0;
-                this.subTimerDisplay.textContent = "5-minute window over";
+                this.subTimerDisplay.textContent = "4-minute window over";
             }
         }
     }
